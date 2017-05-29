@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialLayout="@layout/example_appwidget"
+    android:minHeight="40dp"
+    android:minWidth="40dp" >
+
+</appwidget-provider>
+<!-- android:initialLayout="@layout/example_appwidget"窗体小部件布局结构 -->
+  <!--android:previewImage="@drawable/preview" 预览图片  -->
+   <!--android:widgetCategory="home_screen"  锁屏是否显示  -->

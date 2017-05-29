@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView 
+        android:id="@+id/tv_applock_name"
+         android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="程序名"
+    />
+    <ImageView 
+        android:id="@+id/iv_applock_logo"
+         android:layout_width="45dp"
+    android:layout_height="45dp"
+    android:background="@drawable/ic_launcher"/>
+    <EditText 
+        android:id="@+id/et_applock_psd"
+         android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxLines="1"
+    android:hint="请输入密码"/>
+    <Button 
+                android:id="@+id/bt_applock_confirm"
+        android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="确定"/>
+
+</LinearLayout>

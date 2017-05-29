@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.itheima.mobilesafe74"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- android:versionCode 本地应用版本号1,版本号是2,有必要提示用户更新 -->
+    <!--
+         android:versionName="1.0"  
+			2.1.1:
+			最后的一位:代表修复原有版本的bug
+			倒数第二位:更新部分功能
+			第一位:项目重大更新(代码重构,大部分功能添加,界面整体修改)
+    -->
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.itheima.mobilesafe74" />
+    <!-- android:theme="@android:style/Theme.Light.NoTitleBar" -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <!-- 在窗体上挂在吐司权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 挂断电话权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE"/>
+    
+    <!--有米广告权限  -->
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+	<!-- 以下为可选权限 -->
+	<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    
+    <!--只有系统应用才可有此权限DELETE_CACHE_FILES  -->
+   <!-- <uses-permission android:name="android.permission.DELETE_CACHE_FILES"/> -->
+
+    <application
+        android:name="com.wusai.mobilesafe.utils.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="android.test.runner" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="" />
+
+        <activity
+            android:name="com.wusai.mobilesafe.activity.SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.wusai.mobilesafe.activity.HomeActivity" />
+
+        <intent-filter>
+            <action android:name="android.intent.action.Home" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+
+        <activity android:name="com.wusai.mobilesafe.activity.SettingActivity" />
+        <activity android:name="com.wusai.mobilesafe.activity.TestActivity" />
+        <activity android:name="com.wusai.mobilesafe.activity.SetupOverActivity" />
+        <activity android:name="com.wusai.mobilesafe.activity.Setup1Activity" />
+        <activity android:name="com.wusai.mobilesafe.activity.Setup2Activity" />
+        <activity android:name="com.wusai.mobilesafe.activity.Setup3Activity" />
+        <activity android:name="com.wusai.mobilesafe.activity.Setup4Activity" />
+        <activity android:name="com.wusai.mobilesafe.activity.ContactListActivity" />
+        <activity android:name="com.wusai.mobilesafe.activity.AToolActivity" />
+        <activity android:name="com.wusai.mobilesafe.activity.QueryAddressActivity" />
+        <activity
+            android:name="com.wusai.mobilesafe.activity.ToastLocationActivity"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity android:name="com.wusai.mobilesafe.activity.BlackNumberActivity" />
+        <activity android:name="com.wusai.mobilesafe.activity.AppManagerActivity" />
+        <activity android:name="com.wusai.mobilesafe.activity.ProcessManagerActivity" />
+        <activity android:name="com.wusai.mobilesafe.activity.ProcessSettingActivity" />
+        <activity android:name="com.wusai.mobilesafe.activity.CommonNumberQueryActivity" />
+        <activity android:name="com.wusai.mobilesafe.activity.AppLockActivity" />
+        <activity android:name="com.wusai.mobilesafe.activity.EnterPsdActivity" 
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"/>
+        <activity android:name="com.wusai.mobilesafe.activity.AnitVirusActivity" />
+        <activity android:name="com.wusai.mobilesafe.activity.CacheClearActivity" />
+        <activity android:name="com.wusai.mobilesafe.activity.BaseCacheClearActivity" />
+        <activity android:name="com.wusai.mobilesafe.activity.TrafficActivity" />
+
+        <receiver android:name="com.wusai.mobilesafe.receiver.BootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.wusai.mobilesafe.receiver.KillBackProcess" >
+            <intent-filter>
+                <action android:name="android.intent.action.KILL_BACK_PROCESS" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name="com.wusai.mobilesafe.receiver.SmsReceiver" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.example.devicemanager.DeviceAdmin"
+            android:description="@string/sample_device_admin_description"
+            android:label="@string/sample_device_admin"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_sample" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+        <!--窗体小部件  -->
+        <receiver android:name="com.wusai.mobilesafe.receiver.MyAppWidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/process_widget_provider" />
+        </receiver>
+
+        <service android:name="com.wusai.mobilesafe.service.LocationService" />
+        <service android:name="com.wusai.mobilesafe.service.AddressService" />
+        <service android:name="com.wusai.mobilesafe.service.BlackNumberService" />
+        <service android:name="com.wusai.mobilesafe.service.LockScreenService" />
+        <service android:name="com.wusai.mobilesafe.service.UpdateWidgetService" />
+        <service android:name="com.wusai.mobilesafe.service.WatchDogService" />
+        
+        <!--多米广告組件  -->
+        <activity
+		    android:name="net.youmi.android.AdBrowser"
+		    android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+		    android:theme="@android:style/Theme.Light.NoTitleBar" >
+		</activity>
+		<service
+		    android:name="net.youmi.android.AdService"
+		    android:exported="false" >
+		</service>
+		<receiver
+		    android:name="net.youmi.android.AdReceiver" >
+		    <intent-filter>
+		        <action android:name="android.intent.action.PACKAGE_ADDED" />
+		        <data android:scheme="package" />
+		    </intent-filter>
+		</receiver>
+    </application>
+
+</manifest>

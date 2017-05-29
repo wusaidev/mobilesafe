@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="进程管理" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/tv_progress_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="进程总数" />
+
+        <TextView
+            android:id="@+id/tv_progress_memory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="占用运行内存" />
+    </RelativeLayout>
+	<FrameLayout 
+	    android:layout_width="match_parent"
+        android:layout_height="0dp" 
+        android:layout_weight="1">
+        <ListView
+        android:id="@+id/lv_progress_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:visibility="gone"/>
+        <TextView 
+		    android:id="@+id/tv_progress_lvtag"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:textColor="#ffffffff"
+		   	android:background="#ff888888"
+		   	android:visibility="gone"
+            android:text="假条目，真文本" />
+	</FrameLayout>
+    
+	<include
+	    android:layout_height="0dp"
+	    android:layout_weight="1"
+        android:id="@+id/progress_loading"
+        layout="@layout/progressbar_circle" />
+    <LinearLayout
+        android:id="@+id/ll_progress_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/bt_progress_selectall"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="全选"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/bt_progress_reverseselect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="反选"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/bt_progress_clear"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="一键清理"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/bt_progress_setting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="设置"
+            android:textSize="14sp" />
+    </LinearLayout>
+ 
+
+
+    <!--
+    <LinearLayout
+        android:id="@+id/ll_progress_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ListView
+            android:id="@+id/lv_progress_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+        </ListView>
+
+        
+    </LinearLayout>
+    -->
+
+
+    <!--
+         
+    -->
+
+</LinearLayout>

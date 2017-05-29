@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <!--标题  -->
+    <TextView 
+        style="@style/TitleStyle"
+        android:text="应用管理器"/>"
+     <!--内容  -->
+	<LinearLayout 
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical">
+    	<com.wusai.mobilesafe.view.TextProgressView 
+    	    android:id="@+id/tpv_appmanager_rom_mess"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content">
+    	    
+    	</com.wusai.mobilesafe.view.TextProgressView>
+    	<com.wusai.mobilesafe.view.TextProgressView 
+    	    android:id="@+id/tpv_appmanager_sd_mess"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content">
+    	    
+    	</com.wusai.mobilesafe.view.TextProgressView>
+    	<!-- <RelativeLayout 
+    	    android:layout_width="match_parent"
+    		android:layout_height="wrap_content">
+    	    <ProgressBar 
+    	        style="?android:attr/progressBarStyleHorizontal"
+    	        android:id="@+id/pb_phone_progress"
+    	        android:progressDrawable="@drawable/progress_horizontal"
+    	        android:layout_width="match_parent"
+    			android:layout_height="10dp"/>
+    	    <TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_margin="5dp"
+		        android:id="@+id/tv_memory"
+		        android:text="磁盘可用："/>
+    	</RelativeLayout>
+	    <RelativeLayout 
+    	    android:layout_width="match_parent"
+    		android:layout_height="wrap_content">
+    	    <ProgressBar 
+    	        style="?android:attr/progressBarStyleHorizontal"
+    	        android:id="@+id/pb_sd_progress"
+    	        android:progressDrawable="@drawable/progress_horizontal"
+    	        android:layout_width="match_parent"
+    			android:layout_height="10dp"/>
+    	    <TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_margin="5dp"
+		        android:id="@+id/tv_sd"
+		        android:text="SD卡可用："/>
+    	</RelativeLayout> -->
+	</LinearLayout>
+	<FrameLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent">
+	    <ListView 
+		    android:id="@+id/lv_app"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		   	android:visibility="gone"/>
+	<!--应用标签   假list  -->
+		<TextView 
+		    android:id="@+id/tv_app_lvtag"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:textColor="#ffffffff"
+		   	android:background="#ff888888"
+		   	android:visibility="gone"
+		    android:text="用户应用（3）"/>
+		<include android:id="@+id/ll_loading" layout="@layout/progressbar_circle"/>
+	</FrameLayout>
+	
+	
+"
+	
+</LinearLayout>
